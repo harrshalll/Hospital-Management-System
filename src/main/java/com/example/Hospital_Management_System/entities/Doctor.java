@@ -28,4 +28,8 @@ public class Doctor {
     private Set<Department> departments = new HashSet<>();
     @OneToMany(fetch = FetchType.EAGER)
     private List<Appointment> appointmentList = new ArrayList<>();
+
+    @OneToOne
+    @MapsId
+    private User user;
 }
